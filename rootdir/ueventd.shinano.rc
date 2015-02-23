@@ -108,7 +108,7 @@
 /dev/ttyHSL1                                   0660 system system
 /sys/devices/1.ir-remote enable                0220 system system
 
-# audio NXP speaker amp control device
+# Audio NXP speaker amp control device
 /dev/tfa98xx              0660  system      audio
 
 # S-Force

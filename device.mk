@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The Android Open Source Project
+# Copyright (C) 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -66,7 +66,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
-#Audio
+# Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm8974 \
@@ -79,7 +79,7 @@ PRODUCT_PACKAGES += \
     libaudioalsa \
     libdiag
 
-# for audio.primary.msm8974
+# For audio.primary.msm8974
 PRODUCT_PACKAGES += \
     libtinyalsa \
     libtinycompress \
@@ -94,7 +94,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     libqcompostprocbundle
 
-#GFX
+# GFX
 PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     copybit.msm8974 \
@@ -104,7 +104,7 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqdMetaData
 
-#OMX
+# OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libstagefrighthw \
@@ -124,7 +124,7 @@ PRODUCT_PACKAGES += \
     Tag \
     nfc_nci.pn54x.default
 
-#GPS
+# GPS
 PRODUCT_PACKAGES += \
     libloc_api_v02 \
     libloc_adapter \
@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
     libgps.utils \
     gps.msm8974
 
-#WLAN
+# WiFi
 PRODUCT_PACKAGES += \
     p2p_supplicant.conf \
     gsm_domains.conf \
@@ -167,16 +167,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     Dialer \
-    Email \
-    Exchange2 \
     InCallUI \
     Launcher3
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
-
-PRODUCT_TAGS += dalvik.gc.type-precise
 
 # APN list
 PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
@@ -185,7 +181,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true
 
 # Platform specific default properties
-#
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mtp,adb
 
